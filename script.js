@@ -37,6 +37,18 @@ function resetSelectedIcons(){
   });
 }
 
+// ResetScore & playerchoice/computerChoice
+function restAll() { 
+  playerScoreNumber = 0;
+  computerScoreNumber = 0;
+  playerScoreEl.textContent = playerScoreNumber;
+  computerScoreEl.textContent = computerScoreNumber;
+  playerChoiceEl.textContent = '';
+  computerChoiceEl.textContent = '';
+  resultText.textContent = 'Make Your Move';
+  resetSelectedIcons();
+}
+
 //Random computer choice
 function computerRandomChoice(){
   const computerChoiceNumber = Math.random();
@@ -139,3 +151,8 @@ function select(playerChoice) {
       break;
   }
 }
+
+
+//  On startup, set initial values
+restAll(); 
+
